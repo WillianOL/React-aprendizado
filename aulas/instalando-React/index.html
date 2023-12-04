@@ -14,6 +14,7 @@
 </head>
 
 <body>
+  <!-- Div onde vai ser montado o elemento com React -->
   <div class="element">
   </div>
   <script type="text/babel">
@@ -22,7 +23,8 @@
       const [total, setTotal] = React.useState(0)
       return <button onClick={() => setTotal(total + 1)}>Comprar {total}</button>
     }
-
+    // Primeiro componente
+    // Com o javascript não conseguimos retornar um HTML direto, com React podemos
     function App() {
       return <div>
         <h1>Aplicativo React</h1>
@@ -32,8 +34,11 @@
     }
 
     const conteiner = document.querySelector('.element');
+    // O método createRoot é exclusivo de React. Com ele podemos criar um root
+    // onde vai ser colocado/renderizado o retorno do componente
     const root = ReactDOM.createRoot(conteiner)
-
+    // Para colocar os elementos criados com os componentes, temos que renderizar
+    // .render() e o componente que vai ser colocado
     root.render(<App />)
   </script>
 </body>
