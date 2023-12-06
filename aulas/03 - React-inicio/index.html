@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <section class="conteiner">
+  </section>
+
+  <script type="text/babel">
+    // Esses são os componentes. Servem para dividirmos o código em várias partes pequenas
+    // São criados a partir de funções e retornam elementos JSX(parecido com HTML)
+    // O Babel é responsável por transformar de JSX para JS
+    // Ela passa a ser um componente React quando está retornado um elemento React
+    // Se não retornarem nenhum elemento ela é apenas uma função normal
+    const Button = () => {
+      return <button>Comprar</button>
+    }
+
+    const Navegacao = () => {
+      return <nav>
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+        </ul>  
+      </nav>
+    }
+
+    const Produtos = () => {
+      // Para colocar itens dentro do elemento react usa-se as "{}", e com isso podemos
+      // Utilizar expressões junto por exemplo.
+      const produto1 = 'Camisa'
+      const produto2 = 'Bolsa'
+
+      function cliqueAleatorio({target}) {
+        console.log('Usuário comprou: ' + target.innerText);
+      }
+      // Podemos utilizar os eventos como o de click diretamente no elemento React
+      return <div>
+        <button onClick={cliqueAleatorio}>{produto1} - R${Math.floor(Math.random() * 100)}</button>  
+        <button onClick={cliqueAleatorio}>{produto2} - R${Math.floor(Math.random() * 100)}</button>  
+      </div>
+    }
+
+    // Hooks são funções especiais do React que podemos usar dentro dos componentes 
+    // funcionais. Servindo para modificação de estado
+    const Comprar = () => {
+      // O useState é um hook que define uma variável reativa, ele retorna uma array com o estado inicial
+      // (no caso 0) e uma função que podemos definir seu nome e serve para atualizar o estado.
+      const [valor, setValor] = React.useState(0)
+      function comprou() {
+        setValor(valor + 1)
+      }
+      return <div>
+        <button onClick={comprou}>Comprar: {valor}</button>
+        <p>Total: {valor}</p>  
+        <p>Preço total: {valor * 100}</p>
+      </div>
+    }
+
+    const App = () => {
+      return <div>
+        <h1>Titulo principal</h1>
+        <Navegacao />
+        <Comprar />
+        <Produtos />
+      </div>
+    }
+
+    const conteiner = document.querySelector('.conteiner')
+    const root = ReactDOM.createRoot(conteiner)
+
+    root.render(<App />)
+  </script>
+
+</body>
+</html>
