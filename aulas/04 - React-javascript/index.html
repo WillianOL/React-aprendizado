@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pr-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <title>React X Javascript</title>
+</head>
+<body>
+
+  <h1>Javascript</h1>
+  <div class="javascript">
+    <p>Total: <span id="total"></span></p>
+    <p>Preco: $ <span id="preco"></span></p>
+    <button class="comprar">Comprar</button>
+  </div>
+
+  <h1>React</h1>
+  <div class="react"></div>
+
+  <!-- Com Javascript -->
+  <script>
+    const total = document.querySelector("#total")
+    const preco = document.querySelector("#preco")
+    const botaoComprar = document.querySelector(".comprar")
+
+    let contador = 1;
+    
+    function atualizarDOM(contador) {
+      total.innerText = contador
+      preco.innerText = contador * 5
+    }
+
+    function comprar() {
+      contador++
+      atualizarDOM(contador)
+    }
+
+    botaoComprar.addEventListener("click", comprar)
+
+  </script>
+
+  <!-- Com React -->
+  <script type="text/babel">
+    const Compras = () => {
+      const [value, setValue] = React.useState(1)
+
+      return <div>
+        <p>Total: {value}</p>
+        <p>Preco: ${value * 250}</p>
+        <button onClick={() => {setValue(value + 1)} }>Comprar</button>
+      </div>
+    }
+    
+    ReactDOM.createRoot(document.querySelector('.react')).render(<Compras />)
+  </script>
+
+</body>
+</html>
