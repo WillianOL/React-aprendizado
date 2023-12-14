@@ -3,7 +3,7 @@ import React from "react"
 // Podemos colocar a array diretamente, porem os itens são distribuidos um
 // ao lado do outro
 function App() {
-  // O jeito certo é fazer um map exebindo exibindo os valores. O que pode ser feito
+  // O jeito certo é fazer um map exibindo os valores. O que pode ser feito
   // juntamente de um elemento JSX
   const arrayPessoas = ["Willian", "Eduardo", "João", "Maria"]
   const livros = [
