@@ -23,6 +23,10 @@ function App() {
     setForm({...form, [id]: value})
   }
 
+  // Para usar o textarea dentro do react é a mesma coisa dos inputs. A diferença é que abrimos
+  // e fechamos diretamente a tag.
+  const [textarea, setTextarea] = React.useState("")
+
   return (
     <form onSubmit={enviarForm}>
       <label htmlFor="nome">Nome</label>
@@ -45,6 +49,7 @@ function App() {
       />
       {form.email}
       <button>Enviar</button>
+      <textarea value={textarea} onChange={({target}) => setTextarea(target.value)}/>
     </form>
   );
 }
