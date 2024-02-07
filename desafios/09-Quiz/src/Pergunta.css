@@ -1,0 +1,21 @@
+.pergunta {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 50px 20px;
+  border: 2px solid rgba(0, 0, 0, 0.116);
+  position: relative;
+}
+
+.pergunta p {
+  position: absolute;
+  top: -30px;
+  font-weight: 700;
+  background-color: white;
+}
+
+.pergunta label {
+  font-family: monospace;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
