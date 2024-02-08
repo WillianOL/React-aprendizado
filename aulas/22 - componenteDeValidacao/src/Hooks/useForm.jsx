@@ -36,6 +36,7 @@ const useForm = (dataType) => {
     }
   }
 
+  // Atualizar o estado do value quando algo for digitado no input.
   function onChange({ target }) {
     if (error) validar(target.value);
     setValue(target.value);
