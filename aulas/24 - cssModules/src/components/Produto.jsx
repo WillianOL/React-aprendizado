@@ -1,6 +1,6 @@
 import React from 'react'
 // Usar o css module é bem mais vantajoso pois as classes são geradas automatimamente são unicas
-// Isso previne possiveis comflitos entre as classes durante o desenvolvimento da aplicação.
+// Isso previne possiveis conflitos entre as classes durante o desenvolvimento da aplicação.
 // Ficar atento as regras de declaração de classes em forma de objetos
 // Nunca usar o "-" nas propriedades css por causa de conflitos e sempre usar o camelCase.
 import estilo from "./Produto.module.css"
