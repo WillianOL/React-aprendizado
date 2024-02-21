@@ -1,0 +1,7 @@
+.imgFundo {
+  width: 100px;
+  height: 100px;
+  background-image: url("./img/imagem.png");
+  background-size: cover;
+  border-radius: 50%;
+}
