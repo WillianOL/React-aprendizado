@@ -1,0 +1,14 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #aaa;
+}
+
+.header > nav a.active {
+  color: orangered;
+}
+
+.header a {
+  text-decoration: none;
+}
