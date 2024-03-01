@@ -8,6 +8,9 @@ import Produto from './Produto';
 import Page404 from './Page404';
 
 function App() {
+  // O uso do useParams serve para criarmos rotas dinâmicas, ou seja,
+  // cria-se uma variável que vai controlar qual página vai ser carregada.
+  // desse modo - produto/notebook; produto/celular; pruduto/tv
   return (
     <>
       <BrowserRouter>
