@@ -1,0 +1,29 @@
+.conteinerProdutos {
+  display: flex;
+  align-items: center;
+  max-width: 900px;
+}
+
+.conteinerProdutos nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style: none;
+}
+
+.produto {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.produto img {
+  max-width: 250px;
+  border-radius: 10px;
+  margin-bottom: 10px !important;
+}
+
+.produto h2 {
+  font-size: 1.5rem;
+}
