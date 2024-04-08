@@ -2,7 +2,7 @@ import React from 'react';
 // Para usar o styled components é preciso instalar - npm install styled-components
 import styled from 'styled-components';
 
-// É a mesma coisa de criar um componente, colocando como uma variável e utilizando a importação do
+// É a mesma coisa de criar um componente, colocando em uma variável e utilizando a importação do
 // styled components para acessarmos as tags(isso retorna a tag) e com as crases `` colocamos os
 // estilos
 // em resumo, é como utilizar css juntamente com javascript

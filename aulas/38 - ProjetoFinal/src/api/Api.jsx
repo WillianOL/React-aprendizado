@@ -5,6 +5,7 @@ import PhotoPost from './endPoints/PhotoPost';
 import PhotoGet from './endPoints/PhotoGet';
 
 const Api = () => {
+  // APENAS PARA TESTES!
   return (
     <div>
       <h2>User Post</h2>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Primeiro criar o contexto para usarmos para passarmos o provider e utilizarmos o contexto
+// Primeiro, cria-se o contexto para passarmos o provider e utilizarmos o contexto
 // em outros componentes juntamente com o .useContext(contexto)
 export const GlobalContext = React.createContext();
 

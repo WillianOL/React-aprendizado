@@ -1,4 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --type-fist: Helvetica, Arial, sans-sefif;
+  --type-secund: 'Spectral', Georgia;
+}
+
+body {
+  margin: 0px;
+  color: #333;
+  font-family: var(--type-fist);
+  padding-top: 4rem;
+}
+
+h1,
+h2,
+h3,
+h3,
+p {
+  margin: 0px;
+}
+
+ul,
+li {
+  padding: 0px;
+  list-style: none;
+  margin: 0px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
 input {
   display: block;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-family: var(--type-fist);
+  color: #333;
+}
+
+.conteiner {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
 }

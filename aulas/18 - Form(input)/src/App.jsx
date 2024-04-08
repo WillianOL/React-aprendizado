@@ -49,7 +49,7 @@ function App() {
       />
       {form.email}
       <button>Enviar</button>
-      <textarea value={textarea} onChange={({target}) => setTextarea(target.value)}/>
+      <textarea value ={textarea} onChange={({target}) => setTextarea(target.value)}/>
     </form>
   );
 }
