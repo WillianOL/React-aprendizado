@@ -26,7 +26,7 @@ export const UserStorage = ({ children }) => {
     setLogin(false)
     window.localStorage.removeItem('token')
     navigate('/login')
-  }, [navigate])
+  }, [])
 
   async function userLogin(username, password) {
     try {
