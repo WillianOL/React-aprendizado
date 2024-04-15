@@ -6,6 +6,10 @@ const validacao = {
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
     mensagem: 'Preencha um email válido',
   },
+  number: {
+    regex: /^\d+$/,
+    mensagem: 'Utilize apenas números'
+  }
 };
 
 const useForm = (tipo) => {
