@@ -1,7 +1,7 @@
 import React from 'react';
 import Exemplo from './Exemplo';
 
-// state pe o estado passado, action é a ação passada no dispath.
+// state para o estado passado, action é a ação passada no dispath.
 function reducer(state, action) {
   switch (action) {
     case 'AUMENTAR':

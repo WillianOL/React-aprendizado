@@ -90,3 +90,7 @@ a {
   border-radius: .2rem;
   z-index: -1;
 }
+
+.mainConteiner {
+  margin-top: 4rem;
+}
