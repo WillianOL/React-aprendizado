@@ -1,11 +1,16 @@
-import React from 'react'
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import Feed from '../Feed/Feed';
 
 const UserProfile = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  const { user } = useParams();
 
-export default UserProfile
+  return (
+    <section className='conteiner mainSection'>
+      <h1 className='title' >{user}</h1>
+      <Feed user={user}/>
+    </section>
+  )
+};
+
+export default UserProfile;
