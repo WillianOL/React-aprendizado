@@ -5,7 +5,8 @@ import useForm from '../../hooks/useForm';
 import { USER_POST } from '../../api';
 import { UserContext } from '../../UserContext';
 import useFetch from '../../hooks/useFetch';
-import Error from '../Helper/Error'
+import Error from '../Helper/Error';
+import Head from '../Helper/Head';
 
 const LoginCreate = () => {
   const username = useForm();
@@ -28,6 +29,7 @@ const LoginCreate = () => {
 
   return (
     <section className="animeLeft">
+      <Head title="Crie sua conta" />
       <h1 className="title">Cadastre-se</h1>
       <form onSubmit={criarUsuario}>
         <Input label={'Usuário'} type="text" name="username" {...username} />
@@ -38,7 +40,7 @@ const LoginCreate = () => {
         ) : (
           <Button>Cadastrar</Button>
         )}
-        <Error error={error}/>
+        <Error error={error} />
       </form>
     </section>
   );
